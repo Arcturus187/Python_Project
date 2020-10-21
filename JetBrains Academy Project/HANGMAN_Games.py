@@ -27,7 +27,7 @@ def the_game():
     while True:
         if len(set_check) == 0:
             print('''You guessed the word!
-    You survived!''')
+You survived!''')
             print()
             main_menu()
             break
