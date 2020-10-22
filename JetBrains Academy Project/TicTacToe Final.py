@@ -1,6 +1,4 @@
 class TicTacToe:
-    position = '_________'
-    
     def __init__(self, position):
         self.position = position
         self.coordinate = [position[0:3], position[3:6], position[6:9]]
