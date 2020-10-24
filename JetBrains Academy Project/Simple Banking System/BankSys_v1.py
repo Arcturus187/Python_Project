@@ -16,7 +16,7 @@ class BankSys:
             self.create_account()
         elif menu_num == '2':
             self.login()
-        elif menu_num == '3':
+        elif menu_num == '0':
             self.quit()
         else:
             print('Invalid input')
@@ -53,6 +53,28 @@ Your card PIN:
         self.main_menu()
 
     def login(self):
+        def log_menu(card_num):
+            def balance(card_num):
+                print(f'Balance: {self.account_data[card_num]["balance"]}')
+                print()
+                log_menu(card_num)
+
+
+            print('''1. Balance
+2. Log out
+0. Exit''')
+            menu_num = input()
+            print()
+
+            if menu_num == '1':
+                balance(card_num)
+            elif menu_num == '2':
+                self.main_menu()
+            elif menu_num == '0':
+                self.quit()
+            else:
+                print('Invalid input')
+                log_menu(card_num)
         print('Enter your card number:')
         card_num = input()
         print('Enter your PIN:')
@@ -67,33 +89,12 @@ Your card PIN:
         elif self.account_data[card_num]['pin'] == pin:
             print('You have successfully logged in!')
             print()
-            self.log_menu(card_num)
+            log_menu(card_num)
         else:
             print('Wrong card number or PIN!')
             print()
             self.main_menu()
 
-    def log_menu(self, card_num):
-        print('''1. Balance
-2. Log out
-0. Exit''')
-        menu_num = input()
-        print()
-
-        if menu_num == '1':
-            self.balance(card_num)
-        elif menu_num == '2':
-            self.main_menu()
-        elif menu_num == '3':
-            self.quit()
-        else:
-            print('Invalid input')
-            self.log_menu(card_num)
-
-    def balance(self, card_num):
-        print(f'Balance: {self.account_data[card_num]["balance"]}')
-        print()
-        self.log_menu(card_num)
 
 
 bni = BankSys()
