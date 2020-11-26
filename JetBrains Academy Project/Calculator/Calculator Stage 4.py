@@ -39,5 +39,3 @@ def calculator():
 
 calculator()
 
-
-
