@@ -1,45 +1,43 @@
-def main_menu():
-    while True:
-        cursor = input()
-        if cursor == '/exit':
-            print('Bye !')
-            break
-        elif cursor == '/help':
-            print('_______')
-            continue
-        elif cursor == '':
-            continue
-        else:
-            print(calc_plusmin(cursor))
-
-
-def calc_sign(x):
-    minus_count = x.count('-')
-    if minus_count % 2 == 0:
-        return '+'
-    else:
+def calc_sign(sign):
+    if sign.count('-') % 2 == 1:
         return '-'
-
-
-def list_calc(the_list):
-    sum_list = []
-    for i in range(len(the_list) - 2):
-        use_list = the_list[i:i + 3]
-        if use_list[1] == '+':
-            sum_list.append(int(use_list[0]) + int(use_list[2]))
-        else:
-            sum_list.append(int(use_list[0]) - int(use_list[2]))
-    return sum(sum_list)
-
-
-def calc_plusmin(num):
-    num = num.split()
-    if len(num) == 1:
-        return num[0]
     else:
-        for operator_index in range(1, len(num), 2):
-            num[operator_index] = calc_sign(num[operator_index])
-        return list_calc(num)
+        return '+'
 
 
-main_menu()
+def calc_string(num_string):
+    if num_string == '':
+        pass
+    elif num_string == '/exit':
+        print('Bye !')
+        exit()
+    elif num_string == '/help':
+        pass
+    else:
+        num_list = num_string.split()
+        if len(num_list) == 1:
+            if not num_list[0].isdecimal():
+                print('Invalid input!')
+            else:
+                print(int(num_list[0]))
+        else:
+            result_box = []
+            result_box.append(int(num_list[0]))
+            for i in range(1, len(num_list), 2):
+                tmp_list = num_list[i:i + 2]
+                if calc_sign(tmp_list[0]) == '+':
+                    result_box.append(int(tmp_list[1]))
+                else:
+                    result_box.append(int(tmp_list[1]) * -1)
+            print(sum(result_box))
+
+
+def calculator():
+    while True:
+        calc_string(input())
+
+
+calculator()
+
+
+
