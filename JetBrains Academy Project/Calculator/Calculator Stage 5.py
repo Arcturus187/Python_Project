@@ -24,15 +24,18 @@ def calc_string(num_string):
                 else:
                     print('Invalid expression')
         else:
-            result_box = []
-            result_box.append(int(num_list[0]))
-            for i in range(1, len(num_list), 2):
-                tmp_list = num_list[i:i + 2]
-                if calc_sign(tmp_list[0]) == '+':
-                    result_box.append(int(tmp_list[1]))
-                else:
-                    result_box.append(int(tmp_list[1]) * -1)
-            print(sum(result_box))
+            try:
+                result_box = []
+                result_box.append(int(num_list[0]))
+                for i in range(1, len(num_list), 2):
+                    tmp_list = num_list[i:i + 2]
+                    if calc_sign(tmp_list[0]) == '+':
+                        result_box.append(int(tmp_list[1]))
+                    else:
+                        result_box.append(int(tmp_list[1]) * -1)
+                print(sum(result_box))
+            except:
+                print('Invalid expression')
 
 
 def calculator():
