@@ -16,10 +16,10 @@ def calc_string(num_string):
     else:
         num_list = num_string.split()
         if len(num_list) == 1:
-            if not num_list[0].isdecimal():
-                print('Invalid input!')
-            else:
+            try:
                 print(int(num_list[0]))
+            except:
+                print('Invalid input!')
         else:
             result_box = []
             result_box.append(int(num_list[0]))
@@ -38,4 +38,3 @@ def calculator():
 
 
 calculator()
-
