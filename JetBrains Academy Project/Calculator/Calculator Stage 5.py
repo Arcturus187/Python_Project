@@ -9,17 +9,20 @@ def calc_string(num_string):
     if num_string == '':
         pass
     elif num_string == '/exit':
-        print('Bye !')
+        print('Bye!')
         exit()
     elif num_string == '/help':
-        pass
+        print('HELP TEXT PLACEHOLDER')
     else:
         num_list = num_string.split()
         if len(num_list) == 1:
             try:
                 print(int(num_list[0]))
             except:
-                print('Invalid input!')
+                if num_list[0][0] == '/':
+                    print('Unknown command')
+                else:
+                    print('Invalid expression')
         else:
             result_box = []
             result_box.append(int(num_list[0]))
