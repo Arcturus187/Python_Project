@@ -39,7 +39,7 @@ def convert_rpn(num_list):
             output_stack.append(item)
         elif item in operators and len(operator_stack) == 0:
             operator_stack.append(item)
-        elif item == '(':
+        elif item  == '(':
             operator_stack.append(item)
         elif item == ')':
             while True:
@@ -54,6 +54,8 @@ def convert_rpn(num_list):
             operator_stack.append(item)
         elif item in operators and not operators[item] < operators[peek_stack(operator_stack)]:
             while not operators[item] < operators[peek_stack(operator_stack)]:
+                if len(operator_stack) == 0:
+                    break
                 output_stack.append(operator_stack.pop())
             operator_stack.append(item)
         else:
@@ -64,6 +66,8 @@ def convert_rpn(num_list):
         output_stack.append(operator_stack.pop())
 
     return output_stack
+
+
 
 
 def calculate_rpn(rpn_stack):
@@ -144,19 +148,44 @@ def command_menu(text):
 
 
 def calc_sign(sign_str):
-    if sign_str.count('-') % 2 == 1:
-        return '-'
+    if '+' in sign_str:
+        if '-' in sign_str:
+            if sign_str.count('-') % 2 == 0:
+                return '+'
+            if sign_str.count('-') % 2 == 1:
+                return '-'
+        else:
+            return '+'
+    elif '-' in sign_str:
+        if sign_str.count('-') % 2 == 0:
+            return '+'
+        if sign_str.count('-') % 2 == 1:
+            return '-'
     else:
-        return '+'
+        raise Exception
 
 
 def calculate(text):
+    text = text.replace(' ', '')
+    tmp_list = list(text)
+    n = len(tmp_list)
+    for i in range(n):
+        if i == (n - 1):
+            continue
+        elif tmp_list[i].isnumeric():
+            if tmp_list[i+1].isnumeric():
+                continue
+            else:
+                tmp_list[i] = f'{tmp_list[i]} '
+        else:
+            if tmp_list[i + 1].isnumeric():
+                tmp_list[i] = f'{tmp_list[i]} '
+    text = ''.join(tmp_list)
     tmp_list = text.split()
+
     for i in range(len(tmp_list)):
-        if '-' in tmp_list[i]:
-            tmp_list[i] = calc_sign(tmp_list)
-        elif tmp_list[i].isalpha():
-            tmp_list[i] = str(return_var(tmp_list[i]))
+        if '+' in tmp_list[i] or '-' in tmp_list[i]:
+            tmp_list[i] = calc_sign(tmp_list[i])
     math_str = ' '.join(tmp_list)
     print(int(calculate_rpn(convert_rpn(covert_math_str_list(math_str)))))
 
