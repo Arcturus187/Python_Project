@@ -26,29 +26,8 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
   </component>
-  <component name="RunManager" selected="Python.Calculator Stage 5">
-    <configuration name="BankSys_v1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="Python_Project" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Simple Banking System" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Simple Banking System/BankSys_v1.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Calculator Stage 5" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.Calculator Final Build">
+    <configuration name="Calculator Final Build" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -60,7 +39,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator/Calculator Stage 5.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator/Calculator Final Build.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -69,7 +48,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Luhn Algorithm" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Calculator Stage 6" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -77,11 +56,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Simple Banking System" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Simple Banking System/Luhn Algorithm.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator/Calculator Stage 6.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -90,7 +69,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="roshambo CHAOS EDITION" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Reverse Polish Notation Convert" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,11 +77,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Roshambo with score record" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Roshambo with score record/roshambo CHAOS EDITION.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Calculator/Reverse Polish Notation Convert.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -111,7 +90,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="roshambo" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="Skyrim Command" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="Python_Project" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -119,11 +98,32 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/JetBrains Academy Project/Roshambo with score record" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Personal Project" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/JetBrains Academy Project/Roshambo with score record/roshambo.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Personal Project/Skyrim Command.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="spamcode.pyw" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="Python_Project" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Personal Project" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Personal Project/spamcode.pyw" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -134,11 +134,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.Calculator Stage 5" />
-        <item itemvalue="Python.BankSys_v1" />
-        <item itemvalue="Python.Luhn Algorithm" />
-        <item itemvalue="Python.roshambo CHAOS EDITION" />
-        <item itemvalue="Python.roshambo" />
+        <item itemvalue="Python.Calculator Final Build" />
+        <item itemvalue="Python.Reverse Polish Notation Convert" />
+        <item itemvalue="Python.Calculator Stage 6" />
+        <item itemvalue="Python.spamcode.pyw" />
+        <item itemvalue="Python.Skyrim Command" />
       </list>
     </recent_temporary>
   </component>
@@ -162,22 +162,22 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="426" y="166" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1366.728@0.0.1366.728" timestamp="1603453947123" />
-    <state width="1345" height="519" key="GridCell.Tab.0.bottom" timestamp="1603504723555">
+    <state width="1345" height="180" key="GridCell.Tab.0.bottom" timestamp="1606621851389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="519" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1603504723555" />
-    <state width="1345" height="519" key="GridCell.Tab.0.center" timestamp="1603504723555">
+    <state width="1345" height="180" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1606621851389" />
+    <state width="1345" height="180" key="GridCell.Tab.0.center" timestamp="1606621851389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="519" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1603504723555" />
-    <state width="1345" height="519" key="GridCell.Tab.0.left" timestamp="1603504723555">
+    <state width="1345" height="180" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1606621851389" />
+    <state width="1345" height="180" key="GridCell.Tab.0.left" timestamp="1606621851389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="519" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1603504723555" />
-    <state width="1345" height="519" key="GridCell.Tab.0.right" timestamp="1603504723555">
+    <state width="1345" height="180" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1606621851389" />
+    <state width="1345" height="180" key="GridCell.Tab.0.right" timestamp="1606621851389">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state width="1345" height="519" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1603504723555" />
+    <state width="1345" height="180" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1606621851389" />
     <state width="1345" height="223" key="GridCell.Tab.1.bottom" timestamp="1603447508203">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
@@ -194,9 +194,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state width="1345" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1603447508203" />
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1603445941994">
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1606534772329">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1603445941994" />
+    <state x="346" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1366.728@0.0.1366.728" timestamp="1606534772329" />
   </component>
 </project>
