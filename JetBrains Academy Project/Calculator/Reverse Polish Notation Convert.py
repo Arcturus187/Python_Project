@@ -53,6 +53,8 @@ def convert_rpn(num_list):
             operator_stack.append(item)
         elif item in operators and not operators[item] < operators[peek_stack(operator_stack)]:
             while not operators[item] < operators[peek_stack(operator_stack)]:
+                if len(operator_stack) == 0:
+                    break
                 output_stack.append(operator_stack.pop())
             operator_stack.append(item)
         else:
@@ -93,4 +95,4 @@ def sub_calc(a, b, operator):
         return a + b
 
 
-print(convert_rpn(covert_math_str_list(test_case)))
+print(calculate_rpn(convert_rpn(covert_math_str_list(test_case))))
