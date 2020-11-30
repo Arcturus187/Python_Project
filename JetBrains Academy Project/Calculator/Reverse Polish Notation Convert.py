@@ -25,6 +25,9 @@ def covert_math_str_list(math_str):
         if math_list[i] in operators:
             math_list[i] = f' {math_list[i]} '
     math_list = ''.join(math_list).split()
+    print(math_list)
+    while math_list.count('(') != math_list.count(')'):
+        math_list.append(')')
     return math_list
 
 
@@ -65,8 +68,6 @@ def convert_rpn(num_list):
         output_stack.append(operator_stack.pop())
 
     return output_stack
-
-
 
 
 def calculate_rpn(rpn_stack):
