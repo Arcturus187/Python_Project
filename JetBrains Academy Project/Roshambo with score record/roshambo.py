@@ -4,7 +4,6 @@ name_inp = input('Enter your name: ')
 print(f'Hello, {name_inp}')
 rating_file = open('rating.txt', 'r+')
 rating_dict = {}
-player_opt = None
 opt = ['scissors', 'paper', 'rock']
 
 for lines in rating_file:
