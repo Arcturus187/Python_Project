@@ -6,6 +6,12 @@ operators = {'|': 0,
              '/': 3,
              '+': 4,
              '-': 4}
+sign_convert = {'--': '+',
+                '++': '+',
+                '+-': '-',
+                '-+': '-'
+                }
+
 
 def calc_sign(sign_str):
     if '+' in sign_str:
@@ -47,5 +53,15 @@ def calculate(text):
             tmp_list[i] = calc_sign(tmp_list[i])
     math_str = ' '.join(tmp_list)
     return math_str
+
+def test(text):
+    text = text.replace(' ', '')
+    for keys in sign_convert:
+        print(keys)
+        while keys in text:
+            text = text.replace(keys, sign_convert[keys])
+            print(text)
+    print(text)
+
 while True:
-    print(calculate(input()))
+    test(input())
