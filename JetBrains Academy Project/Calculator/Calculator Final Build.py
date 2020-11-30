@@ -10,6 +10,11 @@ operators = {'|': 0,
              '/': 3,
              '+': 4,
              '-': 4}
+sign_convert = {'--': '+',
+                '++': '+',
+                '+-': '-',
+                '-+': '-'
+                }
 
 
 def peek_stack(stack):
@@ -58,8 +63,6 @@ def convert_rpn(num_list):
                     break
                 output_stack.append(operator_stack.pop())
             operator_stack.append(item)
-        else:
-            raise Exception
 
     n = len(operator_stack)
     for _ in range(n):
@@ -68,18 +71,20 @@ def convert_rpn(num_list):
     return output_stack
 
 
-
-
 def calculate_rpn(rpn_stack):
     calc_stack = collections.deque()
-    while len(rpn_stack) != 0:
-        i = rpn_stack.popleft()
-        if i.isnumeric():
-            calc_stack.append(float(i))
-        elif i in operators:
-            b = calc_stack.pop()
-            a = calc_stack.pop()
-            calc_stack.append(sub_calc(a, b, i))
+    while True:
+        try:
+            i = rpn_stack.popleft()
+            if i.isnumeric():
+                calc_stack.append(float(i))
+            elif i in operators:
+                b = calc_stack.pop()
+                a = calc_stack.pop()
+                calc_stack.append(sub_calc(a, b, i))
+        except:
+            break
+
     return calc_stack[0]
 
 
@@ -147,47 +152,26 @@ def command_menu(text):
         print('Unknown command')
 
 
-def calc_sign(sign_str):
-    if '+' in sign_str:
-        if '-' in sign_str:
-            if sign_str.count('-') % 2 == 0:
-                return '+'
-            if sign_str.count('-') % 2 == 1:
-                return '-'
-        else:
-            return '+'
-    elif '-' in sign_str:
-        if sign_str.count('-') % 2 == 0:
-            return '+'
-        if sign_str.count('-') % 2 == 1:
-            return '-'
-    else:
-        raise Exception
-
-
 def calculate(text):
-    text = text.replace(' ', '')
-    tmp_list = list(text)
-    n = len(tmp_list)
+    n = len(text)
+    var_name = ''
     for i in range(n):
-        if i == (n - 1):
-            continue
-        elif tmp_list[i].isnumeric():
-            if tmp_list[i+1].isnumeric():
-                continue
+        if text[i].isalpha():
+            var_index = i
+            if i == (n - 1):
+                var_name += text[i]
             else:
-                tmp_list[i] = f'{tmp_list[i]} '
-        else:
-            if tmp_list[i + 1].isnumeric():
-                tmp_list[i] = f'{tmp_list[i]} '
-    text = ''.join(tmp_list)
-    tmp_list = text.split()
+                while text[var_index].isalpha():
+                    var_name += text[var_index]
+                    var_index += 1
+            text = text.replace(var_name, f'{return_var(var_name)} ')
+            var_name = ''
 
-    for i in range(len(tmp_list)):
-        if '+' in tmp_list[i] or '-' in tmp_list[i]:
-            tmp_list[i] = calc_sign(tmp_list[i])
-    math_str = ' '.join(tmp_list)
-    print(int(calculate_rpn(convert_rpn(covert_math_str_list(math_str)))))
+    text = text.replace(' ', '')
+    for keys in sign_convert:
+        while keys in text:
+            text = text.replace(keys, sign_convert[keys])
+    print(int(calculate_rpn(convert_rpn(covert_math_str_list(text)))))
 
 
 def main_calc(text):
@@ -209,7 +193,10 @@ def main_calc(text):
         else:
             declare_var(text)
     else:
-        calculate(text)
+        if text.count('(') != text.count(')'):
+            print('Invalid expression')
+        else:
+            calculate(text)
 
 
 while True:
